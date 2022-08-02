@@ -78,15 +78,15 @@ function updateStatusText(isOwner, checking) {
   const statusText = document.querySelector('.owner-status');
   if(checking) {
     if(isOwner) {
-      statusText.innerText = `You do own ${COLLECTION_NAME}!! 😻 Let's see how many${renderDots(dots)}`;
+      statusText.innerText = `The wallet has been successfully connected with B&IYA!`;
     } else {
-      statusText.innerText = `Checking to see if you own any ${COLLECTION_NAME} 😻${renderDots(dots)}`;
+      statusText.innerText = `Connecting your wallet to B&IYA...`;
     }
   } else {
     if(isOwner) {
-      statusText.innerText = `You own ${editions.length} ${COLLECTION_NAME}!! 😻`;
+      statusText.innerText = `The wallet has been successfully connected with B&IYA!!`;
     } else {
-      statusText.innerText = `You don't own any ${COLLECTION_NAME} 😿`;
+      statusText.innerText = `The wallet is connected`;
     }
   }
   dots = dots === 3 ? 1 : dots + 1;
